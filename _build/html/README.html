@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Applied math and a spreadsheet-like environment &#8212; V-Berth Volume</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Volume of the V-Berth Tank" href="index.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">V-Berth Volume</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="#">
+   Applied math and a spreadsheet-like environment
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Volume of the V-Berth Tank
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prism.html">
+   Triangular Prism
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tetrahedron.html">
+   Regular Tetrahedron
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prism-irregular.html">
+   Tapered Triangular Prism
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conclusion.html">
+   Summary and Conclusion
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/README.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Applied math and a spreadsheet-like environment
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#components-required">
+   Components Required
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#document-production">
+   Document Production
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="applied-math-and-a-spreadsheet-like-environment">
+<h1>Applied math and a spreadsheet-like environment<a class="headerlink" href="#applied-math-and-a-spreadsheet-like-environment" title="Permalink to this headline">¶</a></h1>
+<p>This is an example of a fairly complex computation that benefits from a spreadsheet-like
+capability.</p>
+<p>We want to change the measurements, and recompute a very complex estimation.</p>
+<p>This use case of “enter data – see resulting computation” works nicely for spreadsheets
+where the computations aren’t too tricky. We can examine them for correctness, and trust
+they are working.</p>
+<p>When the computations become non-trivial, a spreadsheet can be challenging to
+validate and debug.
+We may not be able to simply examine a computation cell to be sure it’s right.</p>
+<p>This is where Jupyter Lab can be a dramatic improvement over a spreadsheet.
+In these examples we’ll do complex symbolic math (“algebra”) as well as ordinary
+applied math to compute useful values.</p>
+</div>
+<div class="section" id="components-required">
+<h1>Components Required<a class="headerlink" href="#components-required" title="Permalink to this headline">¶</a></h1>
+<p>You’ll need Python, of course. You may want to use Miniconda to help install Python.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>https://docs.conda.io/en/latest/miniconda.html
+</pre></div>
+</div>
+<p>With miniconda, you can build your Python environment.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>conda create --name model python=3.9
+conda activate model
+</pre></div>
+</div>
+<p>Once you have Python, you can then install the suite of tools for working
+with more advanced symbolic math, Sympy <a class="reference external" href="https://docs.sympy.org/latest/index.html">https://docs.sympy.org/latest/index.html</a></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python -m pip install sympy jupyter-lab
+</pre></div>
+</div>
+<p>With the Jupyter lab you can launch the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> notebooks to
+make changes, and do computations. Like a spreadsheet. But
+with real code and real math.</p>
+<p>The final publication of a report or book can be done with two additional tools.</p>
+<p>Jupyter {Book} <a class="reference external" href="https://jupyterbook.org/intro.html">https://jupyterbook.org/intro.html</a></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python -m pip install jupyter-book
+</pre></div>
+</div>
+<p>Requires MyST{NB} <a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/">https://myst-nb.readthedocs.io/en/latest/</a></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python -m pip install myst-nb
+</pre></div>
+</div>
+</div>
+<div class="section" id="document-production">
+<h1>Document Production<a class="headerlink" href="#document-production" title="Permalink to this headline">¶</a></h1>
+<p>Run the following:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>jupyter-book build .
+cp _build/html docs
+</pre></div>
+</div>
+<p>This will create the HTML version.</p>
+<p>To make a PDF, use the following.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>jupyter-book build . --builder pdflatex
+</pre></div>
+</div>
+<p>(This generally relies on having TeX installed.)</p>
+<p>Fair warning: the structure used in this first
+release doesn’t look very good in a PDF. An
+outline that’s accetable in HTML can turn out
+to be weirdly structured when viewed as a PDF.</p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='right-next' id="next-link" href="index.html" title="next page">Volume of the V-Berth Tank</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

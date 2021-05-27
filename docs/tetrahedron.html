@@ -1,0 +1,493 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regular Tetrahedron &#8212; V-Berth Volume</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tapered Triangular Prism" href="prism-irregular.html" />
+    <link rel="prev" title="Triangular Prism" href="prism.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">V-Berth Volume</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="README.html">
+   Applied math and a spreadsheet-like environment
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Volume of the V-Berth Tank
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prism.html">
+   Triangular Prism
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Regular Tetrahedron
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prism-irregular.html">
+   Tapered Triangular Prism
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conclusion.html">
+   Summary and Conclusion
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/tetrahedron.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/tetrahedron.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#computing-the-six-edges">
+   Computing the six edges
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#smallest-and-largest">
+   Smallest and Largest
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#truncation">
+   Truncation
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="regular-tetrahedron">
+<h1>Regular Tetrahedron<a class="headerlink" href="#regular-tetrahedron" title="Permalink to this headline">¶</a></h1>
+<p>A tetrahedron is a structure with four triangular faces.</p>
+<p>Because the tank is flattened at the forward end, we could define a full-sized tetrahedron, and
+then truncate a tiny tetrahedron from the front to better estimate the remaining volume.</p>
+<p>A symmetric (or regular) Tetrahedron has a volume, <span class="math notranslate nohighlight">\(V\)</span>, based on the size of the edges, <span class="math notranslate nohighlight">\(a\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+V = \frac{a^3}{6\sqrt{2}}
+\]</div>
+<p>In our case, the actual tank in question has a number of different edge lengths:</p>
+<ul class="simple">
+<li><p>There are three edges on the aft triangular face. We know the width and height, and can compute the other two edges.</p></li>
+<li><p>Of the three edges on the top triangular face, it shares an edge with the aft face. We know the width and height here, too, and can compute the remaining edges.</p></li>
+<li><p>Finally, the seam along the keel is the sixth and final edge. We can compute this knowing the the top and aft form a right triangle. The hypotenuse of this triangle is the bottom seam.</p></li>
+</ul>
+<p>We have accurate measurements of one edge and two heights. From these we can compute the others.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">myst_nb</span> <span class="kn">import</span> <span class="n">glue</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The measurements include some heights of isoscoles triangles, from which we need to work out the lengths of the edges.</p>
+<p>The aft face, for example is 48 inches across the base, <span class="math notranslate nohighlight">\(w\)</span>, and 27 tall, <span class="math notranslate nohighlight">\(h\)</span>. We can divide this into two right triangles, and compute the remaining edge, <span class="math notranslate nohighlight">\(e\)</span>, length.</p>
+<div class="math notranslate nohighlight">
+\[
+e = \sqrt{{\tfrac{w}{2}}^2 + h^2}
+\]</div>
+<div class="section" id="computing-the-six-edges">
+<h2>Computing the six edges<a class="headerlink" href="#computing-the-six-edges" title="Permalink to this headline">¶</a></h2>
+<p>We’ve measured one edge and two heights:</p>
+<ul class="simple">
+<li><p>The the top of the aft section edge is 48 inches.</p></li>
+<li><p>The height of the base is 27 inches.</p></li>
+<li><p>The height of the top is 46 inces.</p></li>
+</ul>
+<p>From these, we can compute the remaining edges applying the rule <span class="math notranslate nohighlight">\(e^2 = {\frac{w}{2}}^2 + h^2\)</span>. This works because each isoscolese triangle is two right triangles.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">a_1</span><span class="p">,</span> <span class="n">a_2</span><span class="p">,</span> <span class="n">a_3</span><span class="p">,</span> <span class="n">a_4</span><span class="p">,</span> <span class="n">a_5</span><span class="p">,</span> <span class="n">a_6</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;a_1 a_2 a_3 a_4 a_5 a_6&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The &quot;width&quot; (actually the top) of the aft triangle.</span>
+<span class="n">a_1</span> <span class="o">=</span> <span class="mi">48</span>
+
+<span class="c1"># The two sides of the aft triangle, given a height of 27&quot;.</span>
+<span class="n">a_2</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">((</span><span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">a_1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">S</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">a_3</span> <span class="o">=</span> <span class="n">a_2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If the top were not truncated, it would be a triangle with a base of 48 inches, and height that’s a little more than 46 inches. We’ll stick with the truncated measurement of 46 inches, rather than estimate the full, untruncated height.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The two edges of the top, given a height of 46&quot;.</span>
+<span class="n">a_4</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">((</span><span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">a_1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">S</span><span class="p">(</span><span class="mi">46</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">a_5</span> <span class="o">=</span> <span class="n">a_4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The seam along the bottom is the hypotenuse of a 46” by 27” right triangle.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_6</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">S</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">S</span><span class="p">(</span><span class="mi">46</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can take the mean of these edges to estimate a regular tetrahedron that has a similar volume.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">a_1</span> <span class="o">+</span> <span class="n">a_2</span> <span class="o">+</span> <span class="n">a_3</span> <span class="o">+</span> <span class="n">a_4</span> <span class="o">+</span> <span class="n">a_5</span> <span class="o">+</span> <span class="n">a_6</span><span class="p">)</span><span class="o">/</span><span class="mi">6</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">glue</span><span class="p">(</span><span class="s2">&quot;edge&quot;</span><span class="p">,</span> <span class="n">radsimp</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;edge_f&quot;</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 8 + \frac{\sqrt{2845} + 6 \sqrt{145} + 4 \sqrt{673}}{6}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 46.23\]</div>
+</div>
+</div>
+<p>This suggests an edge length of <span class="pasted-inline"><span class="output text_latex math notranslate nohighlight">\(\displaystyle 8 + \frac{\sqrt{2845} + 6 \sqrt{145} + 4 \sqrt{673}}{6}\)</span></span>,
+which is approximately <span class="pasted-text">46.23</span> inches.</p>
+<p>The volume needs to be converted from cubic inches to gallons, using the constant <span class="math notranslate nohighlight">\(231 \frac{\textbf{cu in}}{\textbf{gal}}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">V_r</span> <span class="o">=</span> <span class="n">m</span><span class="o">**</span><span class="mi">3</span> <span class="o">/</span> <span class="p">(</span><span class="mi">6</span> <span class="o">*</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="o">/</span> <span class="mi">231</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">&quot;V&quot;</span><span class="p">)</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;V_r&quot;</span><span class="p">,</span> <span class="n">Eq</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">radsimp</span><span class="p">(</span><span class="n">V_r</span><span class="p">)))</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;V_r_f&quot;</span><span class="p">,</span> <span class="n">V_r</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle V = \frac{\sqrt{2} \left(48 + \sqrt{2845} + 6 \sqrt{145} + 4 \sqrt{673}\right)^{3}}{598752}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 50.4\]</div>
+</div>
+</div>
+<p>This estimates a volume of <span class="pasted-inline"><span class="output text_latex math notranslate nohighlight">\(\displaystyle V = \frac{\sqrt{2} \left(48 + \sqrt{2845} + 6 \sqrt{145} + 4 \sqrt{673}\right)^{3}}{598752}\)</span></span>, which is approximately <span class="pasted-text">50.40</span> gallons.</p>
+<p>This is close to the triangular prism estimate, so this is also a useful guage of the space.</p>
+</div>
+<div class="section" id="smallest-and-largest">
+<h2>Smallest and Largest<a class="headerlink" href="#smallest-and-largest" title="Permalink to this headline">¶</a></h2>
+<p>Does it help to bracket this estimate with two other estimates, the least, <span class="math notranslate nohighlight">\(l\)</span>, and the greatest, <span class="math notranslate nohighlight">\(g\)</span>? If we split these, it’s tolerably close to other estimates.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="nb">min</span><span class="p">([</span><span class="n">a_1</span><span class="p">,</span> <span class="n">a_2</span><span class="p">,</span> <span class="n">a_3</span><span class="p">,</span> <span class="n">a_4</span><span class="p">,</span> <span class="n">a_5</span><span class="p">,</span> <span class="n">a_6</span><span class="p">])</span>
+<span class="n">g</span> <span class="o">=</span> <span class="nb">max</span><span class="p">([</span><span class="n">a_1</span><span class="p">,</span> <span class="n">a_2</span><span class="p">,</span> <span class="n">a_3</span><span class="p">,</span> <span class="n">a_4</span><span class="p">,</span> <span class="n">a_5</span><span class="p">,</span> <span class="n">a_6</span><span class="p">])</span>
+<span class="n">V_l</span> <span class="o">=</span> <span class="n">l</span><span class="o">**</span><span class="mi">3</span> <span class="o">/</span> <span class="p">(</span><span class="mi">6</span> <span class="o">*</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="o">/</span> <span class="mi">231</span>
+<span class="n">V_g</span> <span class="o">=</span> <span class="n">g</span><span class="o">**</span><span class="mi">3</span> <span class="o">/</span> <span class="p">(</span><span class="mi">6</span> <span class="o">*</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="o">/</span> <span class="mi">231</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">glue</span><span class="p">(</span><span class="s2">&quot;l&quot;</span><span class="p">,</span> <span class="n">l</span><span class="p">)</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="n">g</span><span class="p">)</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;V_l&quot;</span><span class="p">,</span> <span class="n">V_l</span><span class="p">)</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;V_l_f&quot;</span><span class="p">,</span> <span class="n">V_l</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;V_g&quot;</span><span class="p">,</span> <span class="n">V_g</span><span class="p">)</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;V_g_f&quot;</span><span class="p">,</span> <span class="n">V_g</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;V_lg_f&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">V_l</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">+</span><span class="n">V_g</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 3 \sqrt{145}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \sqrt{2845}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{435 \sqrt{290}}{308}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 24.05\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{2845 \sqrt{5690}}{2772}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 77.42\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 50.74\]</div>
+</div>
+</div>
+<p>This varies from <span class="pasted-inline"><span class="output text_latex math notranslate nohighlight">\(\displaystyle \frac{435 \sqrt{290}}{308}\)</span></span> to <span class="pasted-inline"><span class="output text_latex math notranslate nohighlight">\(\displaystyle \frac{2845 \sqrt{5690}}{2772}\)</span></span>.
+These extemes are approximately <span class="pasted-text">24.05</span> gallons to <span class="pasted-text">77.42</span> gallons.
+The midpoint, <span class="pasted-text">50.74</span> gallons, also seems to agree with other estimates.</p>
+</div>
+<div class="section" id="truncation">
+<h2>Truncation<a class="headerlink" href="#truncation" title="Permalink to this headline">¶</a></h2>
+<p>There’s a small 9” tetrahedron we could truncate from this volume to improve accuracy. What’s its volume?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">V_t</span> <span class="o">=</span> <span class="mi">9</span><span class="o">**</span><span class="mi">3</span> <span class="o">/</span> <span class="p">(</span><span class="mi">6</span> <span class="o">*</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="o">/</span> <span class="mi">231</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">glue</span><span class="p">(</span><span class="s2">&quot;V_t&quot;</span><span class="p">,</span> <span class="n">V_t</span><span class="p">)</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;V_t_f&quot;</span><span class="p">,</span> <span class="n">V_t</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{81 \sqrt{2}}{308}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 0.3719\]</div>
+</div>
+</div>
+<p>This tiny bit of space is <span class="pasted-inline"><span class="output text_latex math notranslate nohighlight">\(\displaystyle \frac{81 \sqrt{2}}{308}\)</span></span>, which is approximately <span class="pasted-text">0.37</span> gallons.
+It’s negligible, however, being less than a gallon, and we can safely ignore it.</p>
+<p>In the next section, we’ll apply some calculus to compute the volume as an infnite some of triangles, each a slightly different shape. We can model the taper from fore to aft, and use this to compute a more accurate volume.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="prism.html" title="previous page">Triangular Prism</a>
+    <a class='right-next' id="next-link" href="prism-irregular.html" title="next page">Tapered Triangular Prism</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

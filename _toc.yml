@@ -1,0 +1,7 @@
+# In _toc.yml
+- file: README.md
+- file: index.rst
+- file: prism.ipynb
+- file: tetrahedron.ipynb
+- file: prism-irregular.ipynb
+- file: conclusion.rst

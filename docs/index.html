@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volume of the V-Berth Tank &#8212; V-Berth Volume</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Triangular Prism" href="prism.html" />
+    <link rel="prev" title="Applied math and a spreadsheet-like environment" href="README.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="#">
+  
+  
+  <h1 class="site-logo" id="site-title">V-Berth Volume</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="README.html">
+   Applied math and a spreadsheet-like environment
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Volume of the V-Berth Tank
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prism.html">
+   Triangular Prism
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tetrahedron.html">
+   Regular Tetrahedron
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prism-irregular.html">
+   Tapered Triangular Prism
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conclusion.html">
+   Summary and Conclusion
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/index.rst"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="volume-of-the-v-berth-tank">
+<h1>Volume of the V-Berth Tank<a class="headerlink" href="#volume-of-the-v-berth-tank" title="Permalink to this headline">¶</a></h1>
+<p>The objective is to compute the volume of a water tank under the V-berth on a boat.</p>
+<p>The problem we have is that it’s really difficult to get accurate measurements.
+We needs a spreadsheet-like capability to</p>
+<ul class="simple">
+<li><p>Define a computation. In this case, a rather complex one.</p></li>
+<li><p>Provide inputs.</p></li>
+<li><p>See results. We want immediate gratification here. A “compute all cells” kind of thing
+that will rework the math with our new measurements.</p></li>
+</ul>
+<p>Additionally, we want to be able to diagnose errors in the computation, which
+means a bunch of cells with hidden formulae aren’t optimal. We want to see the
+details, including some demonstration that they work. You know, test cases.</p>
+<p>For the non-nautical, the V-berth is the v-shaped bedroom built into the bow of
+the boat. This is a complex shape, flat on the top, but V-shaped on the bottom.
+It sweeps up at the forward end, almost coming to a point.</p>
+<p>This isn’t easy to visualize. The following sketch views the tank from the aft end
+looking forward, toward the pointy end of the boat.
+It shows how there’s a triangular face aft, and a much smaller triangular face forward.
+The top tapers from the aft end, and is a kind of truncated triangle.
+The sides slope down along the inside of the boat’s hull.</p>
+<img alt="_images/IMG_0079.png" src="_images/IMG_0079.png" />
+<p>This diagram is facing forward, showing the large triangle at the aft end of the tank.
+The sizes were preliminary measurements, later refined as the top was cut away to gain
+access to the interior.</p>
+<p>We can describe the space in a number of ways, leading us to three models for the volume:</p>
+<ul class="simple">
+<li><p><strong>Regular Triangular Prism</strong>. While the space tapers from the large aft end to almost a point at the forward end,
+we can use the midpoints along this axis to define
+a triangular prism that should be equivalent to the irregular shape.</p></li>
+<li><p><strong>Regular Tetrahedron</strong>. While the tank isn’t really regular, we can take the mean lengths of the six edges,
+and use this to describe a regular tetrahedron that should have a similar volume.</p></li>
+<li><p><strong>Irregular Triangular Prism</strong>. The tank is a prism that tapers from aft to forward. We can describe this taper
+as a function of the distance along the fore-and-aft axis of the tank.</p></li>
+</ul>
+<p>The differences, it turns out, are relatively minor. The simpler math of a triangular prism
+is accurate enough for our purposes. The other two models serve as confirmation of the volume.</p>
+<p>While a single estimate of the volume is necessary, it’s not sufficient.
+As the top of the structure was removed, it became easier to get more accurate measuremewnts.
+What would help is a closed form function that transforms a given collection measurements
+into a volume estimate.</p>
+<p>It helps to have the computation in the form of a Jupyter Notebook.
+We can change the measurements and see resulting change in the volume.
+This lets us answer a number of design tradeoff questions regarding ways
+to assemble new water tanks or flexible bladders to fill the leaky old aluminum tank that’s in there.</p>
+<p>We’ll start with the Triangular Prism, because it’s involves the least math.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="README.html" title="previous page">Applied math and a spreadsheet-like environment</a>
+    <a class='right-next' id="next-link" href="prism.html" title="next page">Triangular Prism</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

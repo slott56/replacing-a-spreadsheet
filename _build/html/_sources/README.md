@@ -53,7 +53,7 @@ Requires MyST{NB} https://myst-nb.readthedocs.io/en/latest/
 Run the following:
 
     jupyter-book build .
-     cp -r _build/html/. docs
+    cp _build/html docs
 
 This will create the HTML version. 
 

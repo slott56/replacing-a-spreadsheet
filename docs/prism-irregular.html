@@ -1,0 +1,759 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tapered Triangular Prism &#8212; V-Berth Volume</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Summary and Conclusion" href="conclusion.html" />
+    <link rel="prev" title="Regular Tetrahedron" href="tetrahedron.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">V-Berth Volume</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="README.html">
+   Applied math and a spreadsheet-like environment
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Volume of the V-Berth Tank
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prism.html">
+   Triangular Prism
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tetrahedron.html">
+   Regular Tetrahedron
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Tapered Triangular Prism
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conclusion.html">
+   Summary and Conclusion
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/prism-irregular.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/prism-irregular.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#approach">
+   Approach
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#measurements">
+   Measurements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#challenging-the-assumption">
+   Challenging the Assumption
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#computing-the-area">
+   Computing the Area
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#volume-based-on-overall-length">
+   Volume based on overall length
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simplified-form">
+   Simplified form
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matrices">
+   Matrices
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="tapered-triangular-prism">
+<h1>Tapered Triangular Prism<a class="headerlink" href="#tapered-triangular-prism" title="Permalink to this headline">¶</a></h1>
+<p>A regular prism is a solid with two triangular faces joined by three rectangular faces.</p>
+<p>Referring back to the diagram, this is clearly not a good description of the space. The aft and and forward end are triangular, but the remaining three faces are not rectangles; the remaining faces are irregular quadrilaterals.</p>
+<p>One end of the prism, the aft end, or “base”, is an isoscolese triangle, 27” by 48”.
+The other end of the prism, the forward end, is an isoscolese triangle, 8” by 10½”.
+The overall length is 46”.</p>
+<p>We can use calculus to sum an infinte sequence of triangles from the small forward end to the large aft end. This will compute the volume of the prism.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">myst_nb</span> <span class="kn">import</span> <span class="n">glue</span>
+<span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="approach">
+<h2>Approach<a class="headerlink" href="#approach" title="Permalink to this headline">¶</a></h2>
+<p>The volume, <span class="math notranslate nohighlight">\(V\)</span>, of a regular triangular prism is the area of the triangle at either end, <span class="math notranslate nohighlight">\(a\)</span>, integrated along the length of the prism, <span class="math notranslate nohighlight">\(l\)</span>.
+Since the area is fixed, <span class="math notranslate nohighlight">\(a = \frac{h \times w}{2}\)</span>, we have this.</p>
+<div class="math notranslate nohighlight">
+\[
+V_p = \int_0^l a \text{d}z = \int_{0}^{l} \frac{{h \times w}}{{2}} \text{d}z = \frac{h \times w \times l}{2}
+\]</div>
+<p>In our case, we don’t have the same triangle at each end with a fixed area. Instead, we must define area as a function of the offset from the forward end of the tank, <span class="math notranslate nohighlight">\(z\)</span>, <span class="math notranslate nohighlight">\(a = A(z)\)</span>, leading to a slightly more complex integral.</p>
+<div class="math notranslate nohighlight">
+\[
+V = \int_0^l A(z) \text{d}z
+\]</div>
+<p>When we compute the area at any point along the fore-to-aft axis of the tank, we can accurately compute the volume within that infinite sequence of triangles.</p>
+<p>As background, here’s the regular prism volume computation done with <code class="docutils literal notranslate"><span class="pre">sympy</span></code>. This shows how we can translate the math to Python, and use this confirm our results.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;h w l z&quot;</span><span class="p">)</span>
+
+<span class="n">Integral</span><span class="p">(</span><span class="n">h</span><span class="o">*</span><span class="n">w</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">l</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \int\limits_{0}^{l} \frac{h w}{2}\, dz\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Integral</span><span class="p">(</span><span class="n">h</span><span class="o">*</span><span class="n">w</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">l</span><span class="p">))</span><span class="o">.</span><span class="n">doit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{h l w}{2}\]</div>
+</div>
+</div>
+<p>The first step, then, is to compute the area of any triangle from the forward-most <span class="math notranslate nohighlight">\(10 \tfrac{1}{2} \times 8\)</span> to the aft-most <span class="math notranslate nohighlight">\(48 \times 27\)</span>.</p>
+</div>
+<div class="section" id="measurements">
+<h2>Measurements<a class="headerlink" href="#measurements" title="Permalink to this headline">¶</a></h2>
+<p>Here are the essential measurements. We’ve defined these as a dictionary so we can substitute them into other equations. This allows us to change the measurements and get results.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">&quot;h_f, h_a, w_f, w_a, l_fa&quot;</span><span class="p">)</span>
+<span class="n">measured</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c1"># Forward triangle, in inches</span>
+    <span class="s2">&quot;h_f&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="s2">&quot;w_f&quot;</span><span class="p">:</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+
+    <span class="c1"># Aft triangle, in inches</span>
+    <span class="s2">&quot;h_a&quot;</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span>
+    <span class="s2">&quot;w_a&quot;</span><span class="p">:</span> <span class="mi">48</span><span class="p">,</span>
+
+    <span class="c1"># Overall length from forward to aft, in inches.</span>
+    <span class="s2">&quot;l_fa&quot;</span><span class="p">:</span> <span class="mi">46</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here are the essential width as a function of height, <span class="math notranslate nohighlight">\(w_h\)</span>, and area based on height, <span class="math notranslate nohighlight">\(A_h\)</span>, given a height of the triangle, <span class="math notranslate nohighlight">\(h\)</span>.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h</span><span class="p">,</span> <span class="n">w_h</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">A_h</span><span class="p">,</span> <span class="n">A_z</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;h w_h l A z A_h A_z&#39;</span><span class="p">)</span>
+
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;wfh&quot;</span><span class="p">,</span> <span class="n">Eq</span><span class="p">(</span><span class="n">w_h</span><span class="p">,</span> <span class="n">factor</span><span class="p">(</span><span class="n">w_a</span><span class="o">/</span><span class="n">h_a</span> <span class="o">*</span> <span class="n">h</span><span class="p">),</span> <span class="n">evaluate</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="n">w_h</span> <span class="o">=</span> <span class="n">w_a</span><span class="o">/</span><span class="n">h_a</span> <span class="o">*</span> <span class="n">h</span>
+
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;area_h&quot;</span><span class="p">,</span> <span class="n">Eq</span><span class="p">(</span><span class="n">A_h</span><span class="p">,</span> <span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">h</span> <span class="o">*</span> <span class="n">w_h</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle w_{h} = \frac{h w_{a}}{h_{a}}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle A_{h} = \frac{h^{2} w_{a}}{2 h_{a}}\]</div>
+</div>
+</div>
+<p>If we assume the fore and aft triangles are congruent, then the width, <span class="math notranslate nohighlight">\(w\)</span>, of the triangular face of the prism is a function of height, <span class="math notranslate nohighlight">\(h\)</span>.</p>
+<div class="pasted-math math notranslate nohighlight" id="equation-width-from-height">
+<span class="eqno">()<a class="headerlink" href="#equation-width-from-height" title="Permalink to this equation">¶</a></span>\[\displaystyle w_{h} = \frac{h w_{a}}{h_{a}}\]</div>
+<p>Area, <span class="math notranslate nohighlight">\(A = \frac{1}{2} \times w \times h\)</span>, can then become a function of height, <span class="math notranslate nohighlight">\(h\)</span>.</p>
+<div class="pasted-math math notranslate nohighlight" id="equation-area-from-height">
+<span class="eqno">()<a class="headerlink" href="#equation-area-from-height" title="Permalink to this equation">¶</a></span>\[\displaystyle A_{h} = \frac{h^{2} w_{a}}{2 h_{a}}\]</div>
+<p>Height, <span class="math notranslate nohighlight">\(h\)</span>, depends on the distance along the z-distance, meadured from the front of the tank.
+The <span class="math notranslate nohighlight">\(z=0\)</span> position is the forward edge, with a measured height of <span class="math notranslate nohighlight">\(h_f\)</span>.
+The <span class="math notranslate nohighlight">\(z=l_{fa}\)</span> position is length from the forward edge to the aft edge; this has a measured height of <span class="math notranslate nohighlight">\(h_a\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+h(z) = \frac{\Delta h}{\Delta z} \times z + h_f  = \frac{h_a-h_f}{l_{fa}} \times z + h_f
+\]</div>
+<p>We’re assuming each of the two ends of the prism are congruent. This means we’re imposing the aft width and height on the tank as a whole.</p>
+<p>Is this a safe assumption? Spoiler alert: it isn’t.</p>
+</div>
+<div class="section" id="challenging-the-assumption">
+<h2>Challenging the Assumption<a class="headerlink" href="#challenging-the-assumption" title="Permalink to this headline">¶</a></h2>
+<p>We’ve assumed the shape of the forward and aft end of the tank are congruent triangles.
+We’re treating this as a triangular section that grows in size from a small 8” by 10½” triangle
+to a large 27” by 48” triangle.</p>
+<p>Since <span class="math notranslate nohighlight">\(\frac{8}{10 \tfrac{1}{2}} \neq \frac{27}{48}\)</span>, we can see the two triangles aren’t congruent. This simplifies to <span class="math notranslate nohighlight">\(\frac{16}{21} \neq \frac{9}{16}\)</span>.</p>
+<p>Here are the two triangle area computations based on height. <span class="math notranslate nohighlight">\(A_a(h)\)</span> uses the aft height-to-width ratio,
+<span class="math notranslate nohighlight">\(A_f(h)\)</span> uses the forward height-to-width ratio. The <span class="math notranslate nohighlight">\(A(h)\)</span> computations are quite different.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w_a_h</span> <span class="o">=</span> <span class="n">w_a</span><span class="o">/</span><span class="n">h_a</span> <span class="o">*</span> <span class="n">h</span>
+<span class="n">w_f_h</span> <span class="o">=</span> <span class="n">w_f</span><span class="o">/</span><span class="n">h_f</span> <span class="o">*</span> <span class="n">h</span>
+
+<span class="n">A_a_h</span> <span class="o">=</span> <span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">h</span> <span class="o">*</span> <span class="n">w_a_h</span>
+<span class="n">A_f_h</span> <span class="o">=</span> <span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">h</span> <span class="o">*</span> <span class="n">w_f_h</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A_a_h</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">measured</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{8 h^{2}}{9}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A_a_h</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">measured</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 0.889 h^{2}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A_f_h</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">measured</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{21 h^{2}}{32}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A_f_h</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">measured</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 0.656 h^{2}\]</div>
+</div>
+</div>
+<p>This means a simple <span class="math notranslate nohighlight">\(A(h)\)</span> computation using the height, <span class="math notranslate nohighlight">\(h\)</span>, to compute the area isn’t going to be very useful. We have two choices:</p>
+<ul class="simple">
+<li><p>Define area, <span class="math notranslate nohighlight">\(A(z)\)</span> based on independent  <span class="math notranslate nohighlight">\(h(z)\)</span> and <span class="math notranslate nohighlight">\(w(z)\)</span>. We can use <span class="math notranslate nohighlight">\(A(z) = \frac{h(z) \times w(z)}{2}\)</span>.</p></li>
+<li><p>Use a midpoint ratio of width to height, <span class="math notranslate nohighlight">\(r_m\)</span>, to define area. If <span class="math notranslate nohighlight">\(w = r_m \times h(z)\)</span>, then <span class="math notranslate nohighlight">\(A(z) = \frac{h(z) \times w}{2} = \frac{h(z)^2 \times r_m}{2}\)</span>.</p></li>
+</ul>
+<p>Using a midpoint ratio is slightly simpler, but suffers from a problem of being inaccurate. The difference between <span class="math notranslate nohighlight">\(0.889h^2\)</span> and <span class="math notranslate nohighlight">\(0.656h^2\)</span> for small values of <span class="math notranslate nohighlight">\(h\)</span> will be significant.</p>
+<p>We need to compute the area using independent <span class="math notranslate nohighlight">\(h(z)\)</span> and <span class="math notranslate nohighlight">\(w(z)\)</span> functions.</p>
+</div>
+<div class="section" id="computing-the-area">
+<h2>Computing the Area<a class="headerlink" href="#computing-the-area" title="Permalink to this headline">¶</a></h2>
+<p>We can use independent <span class="math notranslate nohighlight">\(h(z)\)</span> and <span class="math notranslate nohighlight">\(w(z)\)</span> functions to compute the overall area of each triangular section of the tank.</p>
+<p>We’ll assume these are linear functions of the form <span class="math notranslate nohighlight">\(y = mx + b\)</span>. The slope, <span class="math notranslate nohighlight">\(m\)</span>, for height is <span class="math notranslate nohighlight">\(\frac{\Delta h}{\Delta z}\)</span>, and the intercept, <span class="math notranslate nohighlight">\(b\)</span>, is the height at the forward end, <span class="math notranslate nohighlight">\(h_f\)</span>. The width equation is similar.</p>
+<p>This leads to two equations for <span class="math notranslate nohighlight">\(h_z\)</span> and <span class="math notranslate nohighlight">\(w_z\)</span>, which are functions of the distance from the forward end, <span class="math notranslate nohighlight">\(z\)</span>.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h_z</span> <span class="o">=</span> <span class="p">(</span><span class="n">h_a</span> <span class="o">-</span> <span class="n">h_f</span><span class="p">)</span> <span class="o">/</span> <span class="n">l_fa</span> <span class="o">*</span> <span class="n">z</span> <span class="o">+</span> <span class="n">h_f</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;hfz&quot;</span><span class="p">,</span> <span class="n">h_z</span><span class="p">)</span>
+<span class="n">w_z</span> <span class="o">=</span> <span class="p">(</span><span class="n">w_a</span> <span class="o">-</span> <span class="n">w_f</span><span class="p">)</span> <span class="o">/</span> <span class="n">l_fa</span> <span class="o">*</span> <span class="n">z</span> <span class="o">+</span> <span class="n">w_f</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;wfz&quot;</span><span class="p">,</span> <span class="n">w_z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle h_{f} + \frac{z \left(h_{a} - h_{f}\right)}{l_{fa}}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle w_{f} + \frac{z \left(w_{a} - w_{f}\right)}{l_{fa}}\]</div>
+</div>
+</div>
+<p>The height, <span class="math notranslate nohighlight">\(h(z) =\)</span> <span class="pasted-inline"><span class="output text_latex math notranslate nohighlight">\(\displaystyle h_{f} + \frac{z \left(h_{a} - h_{f}\right)}{l_{fa}}\)</span></span>. The width, <span class="math notranslate nohighlight">\(w(z) =\)</span> <span class="pasted-inline"><span class="output text_latex math notranslate nohighlight">\(\displaystyle w_{f} + \frac{z \left(w_{a} - w_{f}\right)}{l_{fa}}\)</span></span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A_z</span> <span class="o">=</span> <span class="n">factor</span><span class="p">(</span><span class="n">expand</span><span class="p">(</span><span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">h_z</span> <span class="o">*</span> <span class="n">w_z</span><span class="p">))</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;area_z&quot;</span><span class="p">,</span> <span class="n">A_z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{\left(h_{a} z + h_{f} l_{fa} - h_{f} z\right) \left(l_{fa} w_{f} + w_{a} z - w_{f} z\right)}{2 l_{fa}^{2}}\]</div>
+</div>
+</div>
+<p>From <span class="math notranslate nohighlight">\(h(z)\)</span> and <span class="math notranslate nohighlight">\(w(z)\)</span>, we can compute the area, <span class="math notranslate nohighlight">\(A_z\)</span>, as a function of the distance along the Z axis, <span class="math notranslate nohighlight">\(A(z) = \frac{1}{2} h(z) w(z) = \)</span> <span class="pasted-inline"><span class="output text_latex math notranslate nohighlight">\(\displaystyle \frac{\left(h_{a} z + h_{f} l_{fa} - h_{f} z\right) \left(l_{fa} w_{f} + w_{a} z - w_{f} z\right)}{2 l_{fa}^{2}}\)</span></span>.</p>
+<p>This is a bit bulky. We can try to simplify it. First, however, we need to test it to be sure it produces proper area values.</p>
+<p>We can evaluate the <span class="math notranslate nohighlight">\(h(z)\)</span> and <span class="math notranslate nohighlight">\(w(z)\)</span> functions at <span class="math notranslate nohighlight">\(z=0\)</span> and <span class="math notranslate nohighlight">\(z=l_{fa}\)</span> to be sure we’ve got them right.  We expect <span class="math notranslate nohighlight">\(h(0) = h_f\)</span>, <span class="math notranslate nohighlight">\(h(l_{fa}) = h_a\)</span>, <span class="math notranslate nohighlight">\(w(0) = w_f\)</span>, and <span class="math notranslate nohighlight">\(w(l_{fa}) = w_a\)</span>. We can also substitute the actual measurements to compute values for the fore and aft triangles to be sure they match the original measurements.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h_z</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">z</span><span class="p">:</span> <span class="mi">0</span><span class="p">})</span><span class="o">.</span><span class="n">evalf</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle h_{f}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w_z</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">z</span><span class="p">:</span> <span class="mi">0</span><span class="p">})</span><span class="o">.</span><span class="n">evalf</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle w_{f}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h_z</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">z</span><span class="p">:</span> <span class="n">l_fa</span><span class="p">})</span><span class="o">.</span><span class="n">evalf</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle h_{a}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w_z</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">z</span><span class="p">:</span> <span class="n">l_fa</span><span class="p">})</span><span class="o">.</span><span class="n">evalf</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle w_{a}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">glue</span><span class="p">(</span><span class="s2">&quot;h_f&quot;</span><span class="p">,</span> <span class="n">h_z</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">measured</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">z</span><span class="p">:</span> <span class="mi">0</span><span class="p">})</span><span class="o">.</span><span class="n">evalf</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 8.0\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">glue</span><span class="p">(</span><span class="s2">&quot;w_f&quot;</span><span class="p">,</span> <span class="n">w_z</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">measured</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">z</span><span class="p">:</span> <span class="mi">0</span><span class="p">})</span><span class="o">.</span><span class="n">evalf</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 10.5\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">glue</span><span class="p">(</span><span class="s2">&quot;h_a&quot;</span><span class="p">,</span> <span class="n">h_z</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">measured</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">z</span><span class="p">:</span> <span class="n">measured</span><span class="p">[</span><span class="s1">&#39;l_fa&#39;</span><span class="p">]})</span><span class="o">.</span><span class="n">evalf</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 27.0\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">glue</span><span class="p">(</span><span class="s2">&quot;w_a&quot;</span><span class="p">,</span> <span class="n">w_z</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">measured</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">z</span><span class="p">:</span> <span class="n">measured</span><span class="p">[</span><span class="s1">&#39;l_fa&#39;</span><span class="p">]})</span><span class="o">.</span><span class="n">evalf</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 48.0\]</div>
+</div>
+</div>
+<p>To confirm that we’ve done this right so far, let’s check the model against reality.</p>
+<p>At the forward end of the tank, this model predicts a triangle <span class="pasted-text">10.5</span> across the top,
+with a height of <span class="pasted-text">8.0</span>. This matches the <span class="math notranslate nohighlight">\(10.5 \times 8\)</span> actual.</p>
+<p>At the aft end of the tank, this model predicts a triangle <span class="pasted-text">48.0</span> across the top,
+with a height of <span class="pasted-text">27.0</span>. This matches the <span class="math notranslate nohighlight">\(48 \times 27\)</span> actual, also.</p>
+<p>Now that we can compute the shape of the triangle at each end of the space, we can compute the area, <span class="math notranslate nohighlight">\(A(z) = \frac{h(z) w(z)}{2}\)</span>. From this, we can then compute the volume.</p>
+</div>
+<div class="section" id="volume-based-on-overall-length">
+<h2>Volume based on overall length<a class="headerlink" href="#volume-based-on-overall-length" title="Permalink to this headline">¶</a></h2>
+<p>The volume is the integral of the areas, <span class="math notranslate nohighlight">\(A(z)\)</span> where <span class="math notranslate nohighlight">\(z\)</span> varies from zero to the length of the prism, <span class="math notranslate nohighlight">\(l_fa\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+V = \int_{0}^{l_{fa}} A(z) \text{d}z
+\]</div>
+<p>For a regular prism this is the <span class="math notranslate nohighlight">\(V_p = \frac{h l w}{2}\)</span> formula. Our area is not simply <span class="math notranslate nohighlight">\(\frac{hw}{2}\)</span>, it’s <span class="math notranslate nohighlight">\(A(z) = \)</span> <span class="pasted-inline"><span class="output text_latex math notranslate nohighlight">\(\displaystyle \frac{\left(h_{a} z + h_{f} l_{fa} - h_{f} z\right) \left(l_{fa} w_{f} + w_{a} z - w_{f} z\right)}{2 l_{fa}^{2}}\)</span></span>.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">&quot;V&quot;</span><span class="p">)</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;V&quot;</span><span class="p">,</span> <span class="n">Eq</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">Integral</span><span class="p">(</span><span class="n">A_z</span><span class="p">,</span> <span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">l_fa</span><span class="p">))))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle V = \int\limits_{0}^{l_{fa}} \frac{\left(h_{a} z + h_{f} l_{fa} - h_{f} z\right) \left(l_{fa} w_{f} + w_{a} z - w_{f} z\right)}{2 l_{fa}^{2}}\, dz\]</div>
+</div>
+</div>
+<p>The volume is computed with</p>
+<div class="pasted-math math notranslate nohighlight" id="equation-volume">
+<span class="eqno">()<a class="headerlink" href="#equation-volume" title="Permalink to this equation">¶</a></span>\[\displaystyle V = \int\limits_{0}^{l_{fa}} \frac{\left(h_{a} z + h_{f} l_{fa} - h_{f} z\right) \left(l_{fa} w_{f} + w_{a} z - w_{f} z\right)}{2 l_{fa}^{2}}\, dz\]</div>
+<p>We can substitute our measurements to get the volume. We’ll apply the magical 231 cubic inch per gallon factor to get the volume in gallons of fresh water.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">V</span> <span class="o">=</span> <span class="n">Integral</span><span class="p">(</span><span class="n">A_z</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">measured</span><span class="p">),</span> <span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">measured</span><span class="p">[</span><span class="s1">&#39;l_fa&#39;</span><span class="p">]))</span>
+<span class="n">V_r</span> <span class="o">=</span> <span class="p">(</span><span class="n">V</span><span class="o">.</span><span class="n">doit</span><span class="p">()</span><span class="o">/</span><span class="mi">231</span><span class="p">)</span><span class="o">.</span><span class="n">limit_denominator</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">floor</span><span class="p">(</span><span class="n">V_r</span><span class="p">)</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">frac</span><span class="p">(</span><span class="n">V_r</span><span class="p">)</span><span class="si">}</span><span class="s2"> gallons&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;56 79/90 gallons&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">V_r</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 56.9\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="simplified-form">
+<h2>Simplified form<a class="headerlink" href="#simplified-form" title="Permalink to this headline">¶</a></h2>
+<p>We can create decimal approximations for the fractions, and work with a direct computation that avoids integration. It’s not clear that this is simpler. The generic <code class="docutils literal notranslate"><span class="pre">simplify()</span></code> is a poor choice.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="s2">&quot;l&quot;</span><span class="p">)</span>
+<span class="n">simplify</span><span class="p">(</span><span class="n">Integral</span><span class="p">((</span><span class="n">A_z</span><span class="o">/</span><span class="mi">231</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">l_fa</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{0.00216 \left(h_{f} l_{fa}^{3} w_{f} + l_{fa}^{3} \left(\frac{h_{a} w_{a}}{3} - \frac{h_{a} w_{f}}{3} - \frac{h_{f} w_{a}}{3} + \frac{h_{f} w_{f}}{3}\right) + l_{fa}^{2} \left(\frac{h_{a} l_{fa} w_{f}}{2} + \frac{h_{f} l_{fa} w_{a}}{2} - h_{f} l_{fa} w_{f}\right)\right)}{l_{fa}^{2}}\]</div>
+</div>
+</div>
+<p>This variation collects the various factors together, giving a closed form that’s kind of workable. It involves terms based on <span class="math notranslate nohighlight">\(l_{fa}\)</span>, <span class="math notranslate nohighlight">\(l_{fa}^2\)</span>, and <span class="math notranslate nohighlight">\(l_{fa}^3\)</span> which seems about right. This has a single constant term out front for the conversion from cubic inches to gallons.</p>
+<p>(Using cubic centimeters and liters would avoid the magical 231 cubic inches per gallon.)</p>
+<p>We can try and factor the polynomial , which leads to a much simpler-looking computation of volume.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">V_c</span> <span class="o">=</span> <span class="n">factor</span><span class="p">(</span><span class="n">simplify</span><span class="p">(</span><span class="n">Integral</span><span class="p">((</span><span class="n">A_z</span><span class="o">/</span><span class="mi">231</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">l_fa</span><span class="p">))))</span>
+<span class="n">V_c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 0.000361 l_{fa} \left(2 h_{a} w_{a} + h_{a} w_{f} + h_{f} w_{a} + 2 h_{f} w_{f}\right)\]</div>
+</div>
+</div>
+<p>This seems to be an elegant closed-form equatio for computing volume from the given measurements. We can recompute the volume as our measurements improve.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">V_c</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">measured</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 56.9\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="matrices">
+<h2>Matrices<a class="headerlink" href="#matrices" title="Permalink to this headline">¶</a></h2>
+<p>Note that in the closed form volume equation, each term has some combination of <span class="math notranslate nohighlight">\(h_a\)</span>, <span class="math notranslate nohighlight">\(w_a\)</span>, <span class="math notranslate nohighlight">\(h_f\)</span>, and <span class="math notranslate nohighlight">\(w_f\)</span>, and unavoidable source of complexity. This “sum-of-combinations” suggests there may is a matrix expression to summarize this complexity.</p>
+<p>The following nonsense shows that we can reproduce the volume formula. The following nonsense lacks a clear interpretation. Because it happens to work, it’s likely related to the proper scalar triple product (or box product).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M_h</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([</span><span class="n">h_a</span><span class="p">,</span> <span class="n">h_f</span><span class="p">])</span>
+<span class="n">M_w</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([</span><span class="n">w_a</span><span class="p">,</span> <span class="n">w_f</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">V_m</span> <span class="o">=</span> <span class="n">l_fa</span><span class="o">*</span><span class="p">(</span><span class="n">M_h</span><span class="o">*</span><span class="n">M_w</span><span class="o">.</span><span class="n">transpose</span><span class="p">())</span><span class="o">.</span><span class="n">vec</span><span class="p">()</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Matrix</span><span class="p">([</span><span class="n">S</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="n">S</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">6</span><span class="p">,</span> <span class="n">S</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">6</span><span class="p">,</span> <span class="n">S</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">3</span><span class="p">]))</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="mi">231</span><span class="p">)</span>
+<span class="n">V_m</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{l_{fa} \left(\frac{h_{a} w_{a}}{3} + \frac{h_{a} w_{f}}{6} + \frac{h_{f} w_{a}}{6} + \frac{h_{f} w_{f}}{3}\right)}{462}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">V_m</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">measured</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 56.9\]</div>
+</div>
+</div>
+<p>We’ve left this in as a placeholder for future learning. This seems to be part of the parallelepiped dot product computation.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="tetrahedron.html" title="previous page">Regular Tetrahedron</a>
+    <a class='right-next' id="next-link" href="conclusion.html" title="next page">Summary and Conclusion</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book community<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
