@@ -1,10 +1,4 @@
-.. V-Berth Volume documentation master file, created by
-   sphinx-quickstart on Thu Mar 11 18:52:33 2021.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Volume of the V-Berth Tank
-==========================================
+# Introduction
 
 The objective is to compute the volume of a water tank under the V-berth on a boat.
 
@@ -30,10 +24,9 @@ This isn't easy to visualize. The following sketch views the tank from the aft e
 looking forward, toward the pointy end of the boat.
 It shows how there's a triangular face aft, and a much smaller triangular face forward.
 The top tapers from the aft end, and is a kind of truncated triangle.
-The sides slope down along the inside of the boat's hull. 
+The sides slope down along the inside of the boat's hull.
 
-
-..  image:: IMG_0079.png
+![V-berth sketch](IMG_0079.png)
 
 This diagram is facing forward, showing the large triangle at the aft end of the tank.
 The sizes were preliminary measurements, later refined as the top was cut away to gain 
@@ -44,7 +37,7 @@ We can describe the space in a number of ways, leading us to three models for th
 -   **Regular Triangular Prism**. While the space tapers from the large aft end to almost a point at the forward end, 
     we can use the midpoints along this axis to define
     a triangular prism that should be equivalent to the irregular shape.
-    
+
 -   **Regular Tetrahedron**. While the tank isn't really regular, we can take the mean lengths of the six edges, 
     and use this to describe a regular tetrahedron that should have a similar volume.
 
@@ -64,6 +57,4 @@ We can change the measurements and see resulting change in the volume.
 This lets us answer a number of design tradeoff questions regarding ways
 to assemble new water tanks or flexible bladders to fill the leaky old aluminum tank that's in there.
 
-We'll start with the Triangular Prism, because it's involves the least math.
-
-
+We'll start with the Triangular Prism, because it involves the least math.

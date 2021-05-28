@@ -2,3 +2,4 @@
 title: "V-Berth Volume"
 execute:
   execute_notebooks: "off"
+exclude_patterns: [README.md, LICENSE, docs/*]

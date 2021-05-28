@@ -1,5 +1,4 @@
-Summary and Conclusion
-======================
+# Summary and Conclusion
 
 We've looked at a number of alternatives for estimating the volume of the V-berth fuel tank.
 Each of these uses some slight simplifications of the geometry to make the math a little simpler.

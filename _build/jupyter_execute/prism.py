@@ -101,4 +101,3 @@ Finally, here's the number of gallons as a decimal number.
 V_m.evalf(4, measured)
 
 We'll use this as a baseline to compare to the other estimates.  Next, we'll treat the volume as a regular tetrahedron, also. The math is a little more complex: we'll need to deduce the lengths of some edges from the available height and width values.
-

@@ -28,19 +28,6 @@
     }
   },
   "prism-irregular": {
-    "wfz": {
-      "data": {
-        "text/latex": "$\\displaystyle w_{f} + \\frac{z \\left(w_{a} - w_{f}\\right)}{l_{fa}}$",
-        "text/plain": "w_f + z*(w_a - w_f)/l_fa"
-      },
-      "metadata": {
-        "scrapbook": {
-          "mime_prefix": "",
-          "name": "wfz"
-        }
-      },
-      "output_type": "display_data"
-    },
     "w_f": {
       "data": {
         "text/latex": "$\\displaystyle 10.5$",
@@ -50,32 +37,6 @@
         "scrapbook": {
           "mime_prefix": "",
           "name": "w_f"
-        }
-      },
-      "output_type": "display_data"
-    },
-    "hfz": {
-      "data": {
-        "text/latex": "$\\displaystyle h_{f} + \\frac{z \\left(h_{a} - h_{f}\\right)}{l_{fa}}$",
-        "text/plain": "h_f + z*(h_a - h_f)/l_fa"
-      },
-      "metadata": {
-        "scrapbook": {
-          "mime_prefix": "",
-          "name": "hfz"
-        }
-      },
-      "output_type": "display_data"
-    },
-    "h_f": {
-      "data": {
-        "text/latex": "$\\displaystyle 8.0$",
-        "text/plain": "8.00000000000000"
-      },
-      "metadata": {
-        "scrapbook": {
-          "mime_prefix": "",
-          "name": "h_f"
         }
       },
       "output_type": "display_data"
@@ -93,6 +54,19 @@
       },
       "output_type": "display_data"
     },
+    "hfz": {
+      "data": {
+        "text/latex": "$\\displaystyle h_{f} + \\frac{z \\left(h_{a} - h_{f}\\right)}{l_{fa}}$",
+        "text/plain": "h_f + z*(h_a - h_f)/l_fa"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "",
+          "name": "hfz"
+        }
+      },
+      "output_type": "display_data"
+    },
     "wfh": {
       "data": {
         "text/latex": "$\\displaystyle w_{h} = \\frac{h w_{a}}{h_{a}}$",
@@ -102,19 +76,6 @@
         "scrapbook": {
           "mime_prefix": "",
           "name": "wfh"
-        }
-      },
-      "output_type": "display_data"
-    },
-    "h_a": {
-      "data": {
-        "text/latex": "$\\displaystyle 27.0$",
-        "text/plain": "27.0000000000000"
-      },
-      "metadata": {
-        "scrapbook": {
-          "mime_prefix": "",
-          "name": "h_a"
         }
       },
       "output_type": "display_data"
@@ -132,15 +93,41 @@
       },
       "output_type": "display_data"
     },
-    "w_a": {
+    "wfz": {
       "data": {
-        "text/latex": "$\\displaystyle 48.0$",
-        "text/plain": "48.0000000000000"
+        "text/latex": "$\\displaystyle w_{f} + \\frac{z \\left(w_{a} - w_{f}\\right)}{l_{fa}}$",
+        "text/plain": "w_f + z*(w_a - w_f)/l_fa"
       },
       "metadata": {
         "scrapbook": {
           "mime_prefix": "",
-          "name": "w_a"
+          "name": "wfz"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "h_f": {
+      "data": {
+        "text/latex": "$\\displaystyle 8.0$",
+        "text/plain": "8.00000000000000"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "",
+          "name": "h_f"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "h_a": {
+      "data": {
+        "text/latex": "$\\displaystyle 27.0$",
+        "text/plain": "27.0000000000000"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "",
+          "name": "h_a"
         }
       },
       "output_type": "display_data"
@@ -157,44 +144,31 @@
         }
       },
       "output_type": "display_data"
+    },
+    "w_a": {
+      "data": {
+        "text/latex": "$\\displaystyle 48.0$",
+        "text/plain": "48.0000000000000"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "",
+          "name": "w_a"
+        }
+      },
+      "output_type": "display_data"
     }
   },
   "tetrahedron": {
-    "g": {
+    "V_g": {
       "data": {
-        "text/latex": "$\\displaystyle \\sqrt{2845}$",
-        "text/plain": "sqrt(2845)"
+        "text/latex": "$\\displaystyle \\frac{2845 \\sqrt{5690}}{2772}$",
+        "text/plain": "2845*sqrt(5690)/2772"
       },
       "metadata": {
         "scrapbook": {
           "mime_prefix": "",
-          "name": "g"
-        }
-      },
-      "output_type": "display_data"
-    },
-    "V_l": {
-      "data": {
-        "text/latex": "$\\displaystyle \\frac{435 \\sqrt{290}}{308}$",
-        "text/plain": "435*sqrt(290)/308"
-      },
-      "metadata": {
-        "scrapbook": {
-          "mime_prefix": "",
-          "name": "V_l"
-        }
-      },
-      "output_type": "display_data"
-    },
-    "V_lg_f": {
-      "data": {
-        "text/latex": "$\\displaystyle 50.74$",
-        "text/plain": "50.74"
-      },
-      "metadata": {
-        "scrapbook": {
-          "mime_prefix": "",
-          "name": "V_lg_f"
+          "name": "V_g"
         }
       },
       "output_type": "display_data"
@@ -212,32 +186,6 @@
       },
       "output_type": "display_data"
     },
-    "V_l_f": {
-      "data": {
-        "text/latex": "$\\displaystyle 24.05$",
-        "text/plain": "24.05"
-      },
-      "metadata": {
-        "scrapbook": {
-          "mime_prefix": "",
-          "name": "V_l_f"
-        }
-      },
-      "output_type": "display_data"
-    },
-    "V_t": {
-      "data": {
-        "text/latex": "$\\displaystyle \\frac{81 \\sqrt{2}}{308}$",
-        "text/plain": "81*sqrt(2)/308"
-      },
-      "metadata": {
-        "scrapbook": {
-          "mime_prefix": "",
-          "name": "V_t"
-        }
-      },
-      "output_type": "display_data"
-    },
     "V_r": {
       "data": {
         "text/latex": "$\\displaystyle V = \\frac{\\sqrt{2} \\left(48 + \\sqrt{2845} + 6 \\sqrt{145} + 4 \\sqrt{673}\\right)^{3}}{598752}$",
@@ -251,41 +199,15 @@
       },
       "output_type": "display_data"
     },
-    "l": {
+    "V_l": {
       "data": {
-        "text/latex": "$\\displaystyle 3 \\sqrt{145}$",
-        "text/plain": "3*sqrt(145)"
+        "text/latex": "$\\displaystyle \\frac{435 \\sqrt{290}}{308}$",
+        "text/plain": "435*sqrt(290)/308"
       },
       "metadata": {
         "scrapbook": {
           "mime_prefix": "",
-          "name": "l"
-        }
-      },
-      "output_type": "display_data"
-    },
-    "V_g_f": {
-      "data": {
-        "text/latex": "$\\displaystyle 77.42$",
-        "text/plain": "77.42"
-      },
-      "metadata": {
-        "scrapbook": {
-          "mime_prefix": "",
-          "name": "V_g_f"
-        }
-      },
-      "output_type": "display_data"
-    },
-    "V_r_f": {
-      "data": {
-        "text/latex": "$\\displaystyle 50.4$",
-        "text/plain": "50.40"
-      },
-      "metadata": {
-        "scrapbook": {
-          "mime_prefix": "",
-          "name": "V_r_f"
+          "name": "V_l"
         }
       },
       "output_type": "display_data"
@@ -303,15 +225,67 @@
       },
       "output_type": "display_data"
     },
-    "V_g": {
+    "V_t": {
       "data": {
-        "text/latex": "$\\displaystyle \\frac{2845 \\sqrt{5690}}{2772}$",
-        "text/plain": "2845*sqrt(5690)/2772"
+        "text/latex": "$\\displaystyle \\frac{81 \\sqrt{2}}{308}$",
+        "text/plain": "81*sqrt(2)/308"
       },
       "metadata": {
         "scrapbook": {
           "mime_prefix": "",
-          "name": "V_g"
+          "name": "V_t"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "V_l_f": {
+      "data": {
+        "text/latex": "$\\displaystyle 24.05$",
+        "text/plain": "24.05"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "",
+          "name": "V_l_f"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "V_g_f": {
+      "data": {
+        "text/latex": "$\\displaystyle 77.42$",
+        "text/plain": "77.42"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "",
+          "name": "V_g_f"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "g": {
+      "data": {
+        "text/latex": "$\\displaystyle \\sqrt{2845}$",
+        "text/plain": "sqrt(2845)"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "",
+          "name": "g"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "l": {
+      "data": {
+        "text/latex": "$\\displaystyle 3 \\sqrt{145}$",
+        "text/plain": "3*sqrt(145)"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "",
+          "name": "l"
         }
       },
       "output_type": "display_data"
@@ -325,6 +299,32 @@
         "scrapbook": {
           "mime_prefix": "",
           "name": "edge"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "V_lg_f": {
+      "data": {
+        "text/latex": "$\\displaystyle 50.74$",
+        "text/plain": "50.74"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "",
+          "name": "V_lg_f"
+        }
+      },
+      "output_type": "display_data"
+    },
+    "V_r_f": {
+      "data": {
+        "text/latex": "$\\displaystyle 50.4$",
+        "text/plain": "50.40"
+      },
+      "metadata": {
+        "scrapbook": {
+          "mime_prefix": "",
+          "name": "V_r_f"
         }
       },
       "output_type": "display_data"
